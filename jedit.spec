@@ -28,7 +28,7 @@ Javie.
 %setup -q -n jEdit
 
 %build
-JAVA_HOME="/usr/lib/java"; export JAVA_HOME
+JAVA_HOME=%{_libdir}/java; export JAVA_HOME
 echo 'docbook.xsl=/usr/share/sgml/docbook/xsl-stylesheets' > build.properties
 
 # use xsltproc to build docs (it works, xalan doesn't)
