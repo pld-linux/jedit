@@ -48,7 +48,7 @@ install doc/FAQ/*.html $RPM_BUILD_ROOT%{_datadir}/jedit/doc/FAQ
 cp -rf doc/tips $RPM_BUILD_ROOT%{_datadir}/jedit/doc
 install doc/users-guide/*.html $RPM_BUILD_ROOT%{_datadir}/jedit/doc/users-guide
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
-install -D doc/jedit.png $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
+install -D doc/jedit.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 cat > $RPM_BUILD_ROOT%{_bindir}/jedit <<EOF
 #!/bin/sh
@@ -65,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/jedit
 %{_desktopdir}/*
-%{_iconsdir}/*
+%{_pixmapsdir}/*.png
