@@ -1,12 +1,13 @@
+%define		_pre	pre15
 Summary:	jEdit - cross platform programmer's text editor
 Summary(pl):	jEdit - miêdzyplatformowy tekstowy edytor programisty
 Name:		jedit
-Version:	4.1
-Release:	1
+Version:	4.2
+Release:	0.%{_pre}.1
 License:	GPL v2+
 Group:		Applications/Editors
-Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)source.tar.gz
-# Source0-md5:	93242245baffa3fba02eaa68ec56fea8
+Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)%{_pre}source.tar.gz
+# Source0-md5:	b5d474797360ac3aeb1e7911d7111a8a
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl
 BuildRequires:	jakarta-ant
