@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2+
 Group:		Applications/Editors
 Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)source.tar.gz
-# Source0-md5:	b5d474797360ac3aeb1e7911d7111a8a
+# Source0-md5:	c7fa902fd5ad3207efb45c9171eaacf1
 Source1:	%{name}.desktop
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl
