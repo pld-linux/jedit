@@ -8,6 +8,7 @@ License:	GPL v2+
 Group:		Applications/Editors
 Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)%{_pre}source.tar.gz
 # Source0-md5:	b5d474797360ac3aeb1e7911d7111a8a
+Source1:	%{name}.desktop
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl
 BuildRequires:	jakarta-ant
@@ -46,6 +47,8 @@ install doc/*.{txt,png,html} $RPM_BUILD_ROOT%{_datadir}/jedit/doc
 install doc/FAQ/*.html $RPM_BUILD_ROOT%{_datadir}/jedit/doc/FAQ
 cp -rf doc/tips $RPM_BUILD_ROOT%{_datadir}/jedit/doc
 install doc/users-guide/*.html $RPM_BUILD_ROOT%{_datadir}/jedit/doc/users-guide
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+install -D doc/jedit.png $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 
 cat > $RPM_BUILD_ROOT%{_bindir}/jedit <<EOF
 #!/bin/sh
@@ -61,3 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 #%doc doc/{CHANGES.txt,README.txt,TODO.txt}
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/jedit
+%{_desktopdir}/*
+%{_iconsdir}/*
