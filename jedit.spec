@@ -1,12 +1,11 @@
-%define		_pre	pre15
 Summary:	jEdit - cross platform programmer's text editor
 Summary(pl):	jEdit - miêdzyplatformowy tekstowy edytor programisty
 Name:		jedit
 Version:	4.2
-Release:	0.%{_pre}.1
+Release:	1
 License:	GPL v2+
 Group:		Applications/Editors
-Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)%{_pre}source.tar.gz
+Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)source.tar.gz
 # Source0-md5:	b5d474797360ac3aeb1e7911d7111a8a
 Source1:	%{name}.desktop
 URL:		http://www.jedit.org/
@@ -33,7 +32,7 @@ JAVA_HOME=%{_libdir}/java; export JAVA_HOME
 echo 'docbook.xsl=/usr/share/sgml/docbook/xsl-stylesheets' > build.properties
 
 # use xsltproc to build docs (it works, xalan doesn't)
-ant dist docs-html-xsltproc
+ant dist docs-html
 
 %install
 rm -rf $RPM_BUILD_ROOT
