@@ -5,7 +5,7 @@ Version:	4.1pre4
 Release:	1
 License:	GPL v2+
 Group:		Applications/Editors
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/jedit/%{name}%(echo %{version} | tr -d .)source.tar.gz
+Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)source.tar.gz
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl = 1.53.0
 BuildRequires:	jakarta-ant
