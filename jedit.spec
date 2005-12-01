@@ -44,7 +44,8 @@ cp -rf modes macros $RPM_BUILD_ROOT%{_datadir}/jedit
 # used as online documentation
 install doc/*.{txt,png,html} $RPM_BUILD_ROOT%{_datadir}/jedit/doc
 install doc/FAQ/*.* $RPM_BUILD_ROOT%{_datadir}/jedit/doc/FAQ
-cp -rf doc/tips $RPM_BUILD_ROOT%{_datadir}/jedit/doc
+cp -a doc/tips $RPM_BUILD_ROOT%{_datadir}/jedit/doc
+cp -a doc/news42 $RPM_BUILD_ROOT%{_datadir}/jedit/doc
 install doc/users-guide/*.* $RPM_BUILD_ROOT%{_datadir}/jedit/doc/users-guide
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 install -D doc/jedit.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
