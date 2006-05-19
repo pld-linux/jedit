@@ -12,7 +12,7 @@ Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)%{_p
 Source1:	%{name}.desktop
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl
-BuildRequires:	jakarta-ant
+BuildRequires:	ant
 BuildRequires:	jdk >= %{min_jre}
 BuildRequires:	libxslt-progs
 Requires:	jre >= %{min_jre}
