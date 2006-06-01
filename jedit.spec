@@ -3,18 +3,19 @@ Summary:	jEdit - cross platform programmer's text editor
 Summary(pl):	jEdit - miêdzyplatformowy tekstowy edytor programisty
 Name:		jedit
 Version:	4.3
-%define _pre	pre3
+%define _pre	pre4
 Release:	0.%{_pre}.1
 License:	GPL v2+
 Group:		Applications/Editors
-Source0:	http://dl.sourceforge.net/jedit/%{name}%(echo %{version} | tr -d .)%{_pre}source.tar.gz
-# Source0-md5:	9c58dbe8ea1d04485867f46b761e480d
+Source0:	http://dl.sourceforge.net/jedit/%{name}%{version}%{_pre}source.tar.gz
+# Source0-md5:	0e33e86a97e2426818798b5f1ac56485
 Source1:	%{name}.desktop
 URL:		http://www.jedit.org/
 BuildRequires:	docbook-style-xsl
 BuildRequires:	ant
 BuildRequires:	jdk >= %{min_jre}
 BuildRequires:	libxslt-progs
+BuildRequires:	xml-commons
 Requires:	jre >= %{min_jre}
 Requires:	jre-X11 >= %{min_jre}
 BuildArch:	noarch
@@ -31,7 +32,7 @@ Javie.
 %setup -q -n jEdit
 
 %build
-JAVA_HOME=%{_libdir}/java; export JAVA_HOME
+JAVA_HOME="%{java_home}"; export JAVA_HOME
 echo 'docbook.xsl=/usr/share/sgml/docbook/xsl-stylesheets' > build.properties
 
 # use xsltproc to build docs (it works, xalan doesn't)
