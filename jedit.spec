@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 #%doc doc/{CHANGES.txt,README.txt,TODO.txt}
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/jedit
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
