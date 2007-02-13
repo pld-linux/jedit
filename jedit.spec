@@ -1,6 +1,6 @@
 %define	min_jre	1.4
 Summary:	jEdit - cross platform programmer's text editor
-Summary(pl.UTF-8):   jEdit - międzyplatformowy tekstowy edytor programisty
+Summary(pl.UTF-8):	jEdit - międzyplatformowy tekstowy edytor programisty
 Name:		jedit
 Version:	4.3
 %define _pre	pre4
