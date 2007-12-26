@@ -1,13 +1,12 @@
 [Desktop Entry]
-Encoding=UTF-8
 GenericName=Text Editor
 GenericName[pl]=Edytor tekstu
 Name=jEdit
 Comment=Text Editor
 Comment[pl]=Edytor tekstu
-MimeType=text/plain;application/x-kate-project
+MimeType=text/plain;application/x-kate-project;
 Exec=jedit %u
-Icon=jedit.png
+Icon=jedit
 Type=Application
 Terminal=false
 Categories=TextEditor;
